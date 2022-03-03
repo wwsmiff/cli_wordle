@@ -42,7 +42,7 @@ int main(void)
 		static short count = 0;
 		ans = "";
 		std::cout << "> ";
-		// std::cin >> std::setw(5) >> ans;
+		std::cin >> std::setw(5) >> ans;
 		utils::convertToUpperCase(ans);
 
 		if(ans.size() < 5) std::cout << "The word must have 5 letters" << std::endl;
