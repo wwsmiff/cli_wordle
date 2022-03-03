@@ -23,10 +23,10 @@ int main(void)
 	srand(time(NULL));
 
 	std::string word;
-	std::string ans;
+	std::string ans(5, '\0');
 
 	std::ifstream wordsFile("words.txt");
-	for(short i = 0; i < (random() % 5757 - 1); ++i)
+	for(short i = 0; i < (random() % 5750 - 1); ++i)
 	{
 		std::getline(wordsFile, word);
 	}
@@ -37,19 +37,16 @@ int main(void)
 
 	std::cout << std::endl;
 
-mainLoop:	while(running)
+	while(running)
 	{
 		static short count = 0;
+		ans = "";
 		std::cout << "> ";
-		std::cin >> std::setw(5) >> ans;
+		// std::cin >> std::setw(5) >> ans;
 		utils::convertToUpperCase(ans);
-		
-		if(ans.size() < 5) 
-		{
-			std::cout << "The word must have 5 letters" << std::endl;
-			goto mainLoop;
-		}
 
+		if(ans.size() < 5) std::cout << "The word must have 5 letters" << std::endl;
+		
 		else
 		{
 			for(size_t i = 0; i < ans.size(); ++i)
