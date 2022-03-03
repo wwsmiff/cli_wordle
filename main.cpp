@@ -33,7 +33,7 @@ int main(void)
 
 	utils::convertToUpperCase(word);
 	
-	std::cout << "RULES:\n1. There is a random word which consists of 5 letters.\n2. If the word you guessed has a letter which are there in the original word, it will be highlighted in " << YELLOW << "yellow." << DEFAULT << "\n3. If the word you guessed has a letter which is in the word and in the right position, it will be highlighted in " << GREEN << " green." << DEFAULT << "\n4. If he word you guessed has a letter which is not in the original word, it wont be highlighted." << std::endl;
+	std::cout << "RULES:\n1. There is a random word which consists of 5 letters.\n2. If the word you guessed has a letter which is there in the original word, it will be highlighted in " << YELLOW << "yellow." << DEFAULT << "\n3. If the word you guessed has a letter which is in the word and in the right position, it will be highlighted in " << GREEN << " green." << DEFAULT << "\n4. If he word you guessed has a letter which is not in the original word, it wont be highlighted." << std::endl;
 
 	std::cout << std::endl;
 
