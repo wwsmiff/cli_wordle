@@ -2,6 +2,7 @@
 #include <vector>
 #include <iomanip>
 #include <fstream>
+#include <limits>
 
 #define GREEN "\033[0;32m"
 #define YELLOW "\033[0;33m"
@@ -41,7 +42,10 @@ int main(void)
 	{
 		static short count = 0;
 		std::cout << "> ";
+		char buffer[2048];
 		std::cin >> std::setw(5) >> ans;
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
 		utils::convertToUpperCase(ans);
 
 		if(ans.size() < 5) 
